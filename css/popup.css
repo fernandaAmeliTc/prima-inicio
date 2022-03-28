@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Smokum&display=swap');
+body{
+    background-color:  rgb(255, 255, 255);
+}
+*{
+    font-family: "Roboto";
+    font-weight: 400;
+}
+/* popup - active */
+.popup .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(235, 235, 235, 0.658);
+    z-index: 1;
+    display: none;
+    
+}
+
+.popup .content{border-radius: 20px;
+    position: absolute;
+    top: 85vw;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: #fff;
+    z-index: 2;
+    width: 55%;
+    height: 620px;
+    overflow: hidden;
+}
+.popup .close-btn{
+    cursor: pointer;
+    position:absolute;
+    right: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    color: #ff4e00;
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+.popup.active .overlay{
+    display: block;
+}
+
+.popup.active .content{
+    transition:all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+/* popup diseño */
+/* popup-img */
+.popup-img{
+    background-image: url("../img/wetransfer_gettyimages/popup.jpg");
+    height: 240px;
+    overflow:hidden;
+    background-position: 0 -1.5cm ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.popup-block{
+    position: absolute;
+    height: 35px;
+    top: 150px;
+    left: 50px;
+    width: 115px;
+    display: flex;
+    background-color: #ff4e00 ;
+    border-radius: 30px;
+    margin: auto;
+}
+.popup-block img{
+    height:21px;
+    width: 20px;
+    padding: 2px;
+    position: relative;
+    top: 3px;
+    left: 10px;
+}
+.popup-img-text{
+    position: relative;
+    top: 3px;
+    left: 14px;
+}
+.popup-img-text h4{
+    font-family: "Roboto";
+    color:#fff;
+    margin: 0%;
+    padding: 0%;
+    font-weight: 900;
+    font-size: 12px;
+}
+.popup-img-text h5{
+    font-family: "Roboto";
+    color:#fff;
+    margin: 0%;
+    padding: 0%;
+    font-size: 12px;
+    font-weight: 500;
+}
+/* popup-content */
+
+.popup-contenido{
+    margin: auto;
+    width: 86%;
+}
+.popu-tittle{
+    display: flex;
+}
+.popup-whatsapp{
+    background-color: #ff4e00;
+    padding: 2px 16px;
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 16px;
+    right: 65px;
+}
+
+.popup-whatsapp img{
+    position: relative;
+    top: 2px;
+
+}
+.popup-whatsapp span{
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+    top: -5px;
+}
+.popu-tittle h5{
+    color: #ff4e00;
+    font-weight: 900;
+    font-size: 30px;
+    margin: 0%;
+    margin-top: 9px;
+}
+/* ruc */
+.popup-RUC{
+    display: flex;
+}
+.popup-RUC h4{
+    font-size: 15px;
+    color: #777370;
+}
+.RUC{
+    font-size: 15px;
+    font-weight: 900;
+    padding-right:4px;
+    color: #000;
+}
+
+.popup-contenido p {
+    color: #777370;
+    font-size: 16.5PX;
+    margin-top: 0px;
+}
+.popup-contenido ul {
+    padding: 15px;
+    margin-top: -20px;
+    color: #777370;
+
+}
+.popup-contact-redes{
+    display: flex;margin-top: -40px;
+}
+.popup-contact-redes h5{
+    color: #777370;
+    font-weight: 600;
+    font-size: 18px;
+     padding-right: 26px;
+}
+.popup-contact-redes img{
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+   
+}
+.popup-footer{
+    display: flex;
+}
+.popup-footer p{
+    font-size: 11px;
+    padding: 4px;
+}
+.popup-footer img{
+    width: 20px;
+    height: 20px;
+    margin-top: 6px;
+}
+/* responsive */
+@media only screen and (max-width: 1024px) {
+    .popu-tittle h5{
+        font-size: 28px;
+        }
+}
+
+@media only screen and (max-width: 980px) {
+    .popup .content{
+        width:80% ;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .popup .content{
+        width:85% ;
+    }
+    .popup-whatsapp{
+        background-color: #ff4e00;
+        padding: 2px 16px;
+        border-radius: 20px;
+        position: absolute;
+        margin-top: 15px;
+        right: 30px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .popup .content{
+        width:90% ;
+        top: 40%;
+        height: 660px;
+    }
+    .popup-img{
+        height: 220px;
+        overflow:hidden;
+        background-position: 0 0cm ;
+    }
+    .popu-tittle{
+        display: block;
+    }
+    
+    .popup-RUC h4{
+        font-size: 16.5px;
+        color: #777370;
+    }
+
+}
+@media only screen and (max-width: 415px) {
+    .popup .content{
+
+        top: 50%;
+
+    }
+
+}
+@media only screen and (max-width: 395px) {
+    .popup .content{
+        width:90% ;
+        top: 55%;
+        height: 680px;
+    }
+    .popup-img{
+        height: 220px;
+        overflow:hidden;
+        background-position: 0 0cm ;
+    }
+
+    
+    .popup-RUC h4{
+        font-size: 15px;
+        color: #777370;
+    }
+
+    .popup-whatsapp{
+        padding: 1px 16px;
+        border-radius: 20px;
+        position: absolute;
+        margin-top: 16px;
+        right: 32px;
+    }
+    
+    .popup-whatsapp img{
+        width: 18px;
+        position: relative;
+        top: 2px;
+    
+    }
+    .popup-whatsapp span{
+        font-size: 13px;
+        top: -3px;
+    }
+    .popup-block{
+
+        left: 20px;
+    }
+    .popu-tittle h5{
+        text-align: center;
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width: 395px) {
+    .popup .content{
+
+        top: 52%;
+
+    }
+
+}
+
+
+@media only screen and (max-width: 360px) {
+    .popup .content{
+
+        top: 56%;
+
+    }
+
+}
+
+
+@media only screen and (max-width: 320px) {
+    .popup .content{
+        top: 60%;
+    }
+
+}
+
+@media only screen and (max-width: 360px) {
+    .popup .content{
+        height:790px;
+        top: 70%;
+        width: 96%;
+    }
+    .popup-whatsapp{
+        background-color: #ff4e00;
+        padding: 2px 5px;
+        border-radius: 20px;
+        position: absolute;
+        margin-top: 15px;
+        right: 30px;
+    }
+}
+
